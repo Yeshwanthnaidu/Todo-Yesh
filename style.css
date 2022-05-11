@@ -1,0 +1,577 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right,rgba(0, 0, 0, 0.900), rgba(0, 0, 0, 0.907)), url("KQ1BHw.jpg");
+    background-size: cover;
+    color: black;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+}
+
+.svgicon {
+    width: 45px;
+    margin: 15px;
+}
+
+.todo {
+    color: white;
+    font-size: 38px;
+    margin: 12px 0;
+    font-family: 'Bebas Neue',
+        cursive;
+}
+
+.menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    gap: 20px;
+}
+
+.menubtn {
+    border: none;
+    background-color: rgb(4, 73, 0);
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.menubtn:hover {
+    background-color: rgb(0, 30, 0);
+    transform: scale(1.05);
+    transition: 300ms;
+}
+
+.dateandtime {
+    display: flex;
+    justify-content: end;
+    padding: 30px 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.datetime {
+    font-family: sans-serif;
+    color: white;
+    font-size: 25px;
+    padding: 0px 40px;
+}
+
+.searchsection {
+    display: flex;
+    justify-content: center;
+}
+
+
+.searchel {
+    display: grid;
+    width: 35%;
+}
+
+.search {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+}
+
+.maincontainer {
+    margin-left: 13%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.eventcontainer {
+    display: grid;
+    grid-template-rows: 1fr 30px 40px;
+    background-color: rgb(52, 52, 52);
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: inset;
+    padding: 10px;
+}
+
+.event {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
+.sno {
+    color: rgb(177, 177, 177);
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    opacity: 50%;
+}
+
+.task {
+    color: rgb(255, 255, 255);
+    width: 100%;
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dateshow_1{
+    color: whitesmoke;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 10px;
+}
+
+.btnsupdate {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.updatebtn {
+    border-radius: 15px;
+    color: white;   
+    font-weight: 600;
+    border: none;
+}
+
+.finished {
+    background-color: rgb(0, 141, 0);
+}
+
+.finished:hover {
+    background-color: rgb(0, 87, 0);
+    transform: scale(1.05);
+    transition: 300ms;
+}
+
+.update {
+    background-color: rgb(255, 255, 111);
+    color: rgb(39, 39, 39);
+}
+
+.update:hover {
+    background-color: rgb(255, 255, 65);
+    transform: scale(1.05);
+    transition: 300ms;
+    color: rgb(39, 39, 39);
+
+}
+
+
+.finupd {
+    opacity: 0.5;
+}
+
+.decor {
+    text-decoration: line-through;
+}
+
+.delete {
+    background-color: rgb(93, 1, 1);
+}
+
+.delete:hover {
+    background-color: rgb(40, 0, 0);
+    transform: scale(1.05);
+    transition: 300ms;
+}
+
+.delanmi {
+    animation: delanmi 1500ms;
+}
+
+@keyframes delanmi {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}
+
+.addcontainer {
+    position: absolute;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    color: rgb(212, 212, 212);
+    cursor: pointer;
+}
+
+.addcontainer:hover {
+    transform: scale(1.1);
+    transition: 300ms;
+}
+
+.addbox{
+    display: flex;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(39, 39, 39);
+    width: 180px;
+}
+
+.addtaskbtn_1 {
+    background: none;
+    display: flex;
+    border: none;
+    color: whitesmoke;
+    font-size: 20px;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: 600
+    ;
+}
+
+.btn_01 {
+    padding-left: 10px;
+}
+
+.plusicon {
+    width: 40px;
+}
+
+.textadd {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    padding: 9px;
+}
+
+.tasknewbox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: grey;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    width:30%;
+}
+
+.datendbtn {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.newtaskinput {
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+}
+
+.newtaskadd {
+width: 20%;
+border-radius: 15px;
+color: white;
+font-weight: 600;
+border: none;
+background-color: rgb(0, 141, 0);
+}
+
+.newtaskadd:hover {
+    background-color: rgb(0, 87, 0);
+    transform: scale(1.05);
+    transition: 300ms;
+}
+
+.cancel {
+    width: 20%;
+    border-radius: 15px;
+    color: rgb(47, 47, 47);
+    font-weight: 600;
+    border: none;
+    background-color: whitesmoke;
+}
+
+.cancel:hover {
+    background-color: rgb(188, 188, 188);
+    transform: scale(1.05);
+    transition: 300ms;
+}
+
+.fissionlogo {
+    margin: 12px;
+}
+
+
+.calenderinp {
+padding: 10px;
+font-size: 20px;
+font-family: 'Poppins', sans-serif;
+border-radius: 10px;
+}
+
+.errormsg {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+
+.lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    background: rgb(0, 174, 12);
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds-facebook div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+}
+
+@keyframes lds-facebook {
+    0% {
+        top: 8px;
+        height: 64px;
+    }
+
+    50%,
+    100% {
+        top: 24px;
+        height: 32px;
+    }
+}
+
+.blur {
+    filter: blur(8px);
+    transition: 500ms;
+}
+
+.hidden {
+    display: none;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    body {
+        background: none;
+        background-color: black;
+    }
+
+    .menubtn{
+        font-size: 12px;
+    }
+
+    .errormsg {
+        top: 80%;
+        background-color: whitesmoke;
+        border: 3px solid black;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .tasknewbox {
+            width: 40%;
+        }
+
+} 
+
+@media only screen and (max-width: 1050px) {
+    body {
+        background: none;
+        background-color: black;
+    }
+
+    .menu {
+        display: grid;
+        position: unset;
+        grid-template-columns: repeat(7,1fr); 
+    }
+
+    .menubtn {
+       font-size: 15px;
+       width: auto;
+     }
+
+   .maincontainer {
+       margin-left: 0%;
+   }
+
+    .searchel{
+        width: 60%;
+    }
+
+        .tasknewbox {
+            width: 50%;
+        }
+    
+}
+
+ @media only screen and (max-width: 870px) {
+
+    .menu {
+            display: grid;
+            position: unset;
+            grid-template-columns: repeat(6, 1fr);
+        }
+
+    .maincontainer {
+            grid-template-columns: repeat(2, 1fr);
+    }
+
+        .tasknewbox {
+            width: 60%;
+        }   
+   
+}
+
+ @media only screen and (max-width: 770px) {
+
+     .menu {
+         display: grid;
+         position: unset;
+         grid-template-columns: repeat(5, 1fr);
+     }
+
+.tasknewbox {
+    width: 70%;
+}
+
+ }
+
+  @media only screen and (max-width: 650px) {
+
+      .menu {
+          display: grid;
+          position: unset;
+          grid-template-columns: repeat(4, 1fr);
+      }
+
+          .tasknewbox {
+              width: 80%;
+          }
+
+  }
+
+  @media only screen and (max-width: 650px) {
+
+    .maincontainer {
+            grid-template-columns: 1fr;
+        }
+
+    .searchel {
+      width: 90%;
+    }
+    
+        .tasknewbox {
+            width: 90%;
+        }
+
+  }
+
+  @media only screen and (max-width: 580px) {
+
+        .todo{
+            font-size: 30px;
+        }
+
+        .fissionlogo {
+            width: 250px;
+            padding: 3%;
+        }
+
+  }
+
+  @media only screen and (max-width: 500px) {
+
+        .menu {
+                display: grid;
+                position: unset;
+                font-size: 10px;
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+        .todo {
+                font-size: 20px;
+            }
+
+        .fissionlogo {
+            width: 200px;
+            padding: 3%;
+            }
+
+        .datetime {
+            font-size: 20px;
+        }
+  }
+
+  @media only screen and (max-width: 400px) {
+
+      .menu {
+          display: grid;
+          position: unset;
+          font-size: 10px;
+          grid-template-columns: repeat(2, 1fr);
+      }
+
+      .todo {
+          font-size: 18px;
+      }
+
+      .fissionlogo {
+          width: 150px;
+          padding: 3%;
+      }
+
+          .datetime {
+              font-size: 18px;
+          }
+  }
